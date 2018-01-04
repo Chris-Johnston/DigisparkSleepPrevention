@@ -4,7 +4,7 @@ A small program that runs on [DigiSpark devices][digispark] that is meant
 to keep a computer's screen on and prevent it from going to sleep
 automatically.
 
-Every minute it wiggles the mouse cursor slightly.
+Every 15 seconds or so it wiggles the mouse cursor slightly.
 
 These devices are nice because they are small and very cheap. This also can get around
 group policy or other settings that can make the computer go to sleep automatically.

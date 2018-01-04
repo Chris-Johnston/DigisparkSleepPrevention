@@ -1,12 +1,12 @@
 // https://github.com/Chris-Johnston/DigisparkSleepPrevention
 
-// wiggles the mouse every minute to prevent the mouse 
+// wiggles the mouse every few seconds 
+// to prevent the mouse 
 // from going to sleep
 // useful when something has to run on the computer
 // and the computer must stay on
 
-// one minute
-#define WAIT_TIME (60 * 1000)
+#define WAIT_TIME 15000
 
 #include <DigiMouse.h>
 
@@ -15,16 +15,21 @@ void setup() {
 }
 
 void loop() {
-  // move the mouse a bit
-  DigiMouse.moveX(50);
-  DigiMouse.moveY(50);
+  for(int i = 0; i < 50; i++)
+  {
+    DigiMouse.moveX(5);
+    DigiMouse.moveY(5);
 
-  DigiMouse.delay(100);
+    DigiMouse.delay(3);
+  }
 
-  // move it back
-  DigiMouse.moveX(-50);
-  DigiMouse.moveY(-50);
+  for(int i = 0; i < 50; i++)
+  {
+    DigiMouse.moveX(-5);
+    DigiMouse.moveY(-5);
 
+    DigiMouse.delay(3);
+  }
   // wait the longer interval
   DigiMouse.delay(WAIT_TIME);
 }
